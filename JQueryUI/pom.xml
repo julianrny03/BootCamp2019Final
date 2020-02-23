@@ -10,14 +10,6 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <dependencies>
-        <dependency>
-            <groupId>com.piit</groupId>
-            <artifactId>Generic</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
-
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>JQueryUI</artifactId>
@@ -44,6 +36,26 @@
             </plugin>
         </plugins>
     </build>
+    <dependencies>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-support</artifactId>
+            <version>3.141.59</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.qa</groupId>
+            <artifactId>Generic</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.qa</groupId>
+            <artifactId>Generic</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 
 
 </project>
