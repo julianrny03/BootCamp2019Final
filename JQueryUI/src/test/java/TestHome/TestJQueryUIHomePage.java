@@ -1,6 +1,5 @@
 package TestHome;
 
-import common.WebAPI;
 import home.pageObject.JQueryUIHomePage;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
@@ -44,5 +43,15 @@ public class TestJQueryUIHomePage extends JQueryUIHomePage {
     @Test
     public void clickSortable(){
         selectInteractions("Sortable");
+    }
+
+    @Test
+    public void clickPosotion(){
+        selectUtilities("Position");
+    }
+
+    @Test
+    public void clickWidgetFactory(){
+        selectUtilities("Widget Factory");
     }
 }

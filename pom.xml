@@ -11,6 +11,8 @@
     <modules>
         <module>Generic</module>
         <module>JQueryUI</module>
+        <module>Chase</module>
+        <module>Amazon</module>
     </modules>
 
     <properties>

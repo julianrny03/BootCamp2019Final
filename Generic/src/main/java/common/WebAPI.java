@@ -109,7 +109,7 @@ public class WebAPI {
     @BeforeMethod
     public void setUp(@Optional("false") boolean useCloudEnv, @Optional("false") String cloudEnvName,
                       @Optional("OS X") String os, @Optional("10") String os_version, @Optional("chrome-options") String browserName, @Optional("chrome")
-                              String browserVersion, @Optional("https://jqueryui.com/") String url) throws IOException {
+                              String browserVersion, @Optional("https://www.amazon.com") String url) throws IOException {
         //System.setProperty("webdriver.chrome.driver", "/Users/peoplentech/eclipse-workspace-March2018/SeleniumProject1/driver/chromedriver");
         if (useCloudEnv == true) {
             if (cloudEnvName.equalsIgnoreCase("browserstack")) {
@@ -125,12 +125,12 @@ public class WebAPI {
         driver.manage().window().maximize();
     }
 
-    public WebDriver getLocalDriver(@Optional("mac")String OS, String browserName) {
+    public WebDriver getLocalDriver(@Optional("OS X")String OS, String browserName) {
         if (browserName.equalsIgnoreCase("chrome")) {
             if (OS.equalsIgnoreCase("OS X")) {
-                System.setProperty("webdriver.chrome.driver", "../Generic/BrowserDriver/Windows/chromedriver");
+                System.setProperty("webdriver.chrome.driver", "../Generic/BrowserDriver/Mac/chromedriver");
             } else if (OS.equalsIgnoreCase("Windows")) {
-                System.setProperty("webdriver.chrome.driver", "../Generic/BrowserDriver/Mac/chromedriver.exe");
+                System.setProperty("webdriver.chrome.driver", "../Generic/BrowserDriver/Windows/chromedriver.exe");
 
             }
             driver = new ChromeDriver();
@@ -587,6 +587,14 @@ public class WebAPI {
         );
     }
 
+    //scroll using JsExecutor
+    public void scrollIntoView(WebElement element){
+        ((JavascriptExecutor)driver).executeScript(
+                "arguments[0].scrollIntoView();",
+                element
+        );
+    }
+
     public void clearInputBox(WebElement webElement) {
         webElement.clear();
     }
@@ -594,11 +602,4 @@ public class WebAPI {
         String text = webElement.getText();
         return text;
     }
-
-
-
-
-
-
-
 }
