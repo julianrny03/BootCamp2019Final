@@ -46,6 +46,7 @@ public class HomePage extends WebAPI {
         }
     }
 
+    // make sure my local Mongo is running in order for this to work. if it were on a server, it will work just fine.
     public void SearchAllItemsInMongoDb(){
         List<String> items = new ArrayList<>();
         MongoDatabase db = MongoDbHelper.getDatabase("items");
@@ -69,6 +70,7 @@ public class HomePage extends WebAPI {
             cursor.close();
         }
     }
+
     public void select() {}
 
     //Select Drop down Using Select class
@@ -77,8 +79,8 @@ public class HomePage extends WebAPI {
 
         Select selector = new Select(allDropDown);
         selector.selectByVisibleText(option);
-        //wait on header
 
+        //get current selected element
         WebElement current = driver.findElement(By.xpath("//select/option[contains(text(), '" + option + "')]"));
         Assert.assertTrue(selector.getAllSelectedOptions().contains(current), "wrong page selected");
     }

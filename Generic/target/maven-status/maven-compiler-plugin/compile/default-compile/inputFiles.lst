@@ -1,10 +1,12 @@
 /Users/julian/Bootcamp_WeekDays_Selenium_December2019/Generic/src/main/java/reporting/TestLogger.java
+/Users/julian/Bootcamp_WeekDays_Selenium_December2019/Generic/src/main/java/utility/ExcelReader.java
 /Users/julian/Bootcamp_WeekDays_Selenium_December2019/Generic/src/main/java/common/WebAPI.java
 /Users/julian/Bootcamp_WeekDays_Selenium_December2019/Generic/src/main/java/reporting/ExtentManager.java
 /Users/julian/Bootcamp_WeekDays_Selenium_December2019/Generic/src/main/java/databases/Student.java
 /Users/julian/Bootcamp_WeekDays_Selenium_December2019/Generic/src/main/java/databases/ConnectToSqlDB.java
+/Users/julian/Bootcamp_WeekDays_Selenium_December2019/Generic/src/main/java/utility/ExcelParser.java
 /Users/julian/Bootcamp_WeekDays_Selenium_December2019/Generic/src/main/java/reporting/ApplicationLog.java
 /Users/julian/Bootcamp_WeekDays_Selenium_December2019/Generic/src/main/java/databases/User.java
+/Users/julian/Bootcamp_WeekDays_Selenium_December2019/Generic/src/main/java/utility/ExcelWriter.java
 /Users/julian/Bootcamp_WeekDays_Selenium_December2019/Generic/src/main/java/reporting/ExtentTestManager.java
-/Users/julian/Bootcamp_WeekDays_Selenium_December2019/Generic/src/main/java/utility/DataReader.java
 /Users/julian/Bootcamp_WeekDays_Selenium_December2019/Generic/src/main/java/databases/ConnectToMongoDB.java

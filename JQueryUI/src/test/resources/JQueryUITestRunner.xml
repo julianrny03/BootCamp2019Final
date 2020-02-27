@@ -18,6 +18,7 @@
 
         <classes>
             <class name="TestHome.TestJQueryUIHomePage"/>
+            <class name="TestHome.HomePageActionsTests"></class>
         </classes>
 
     </test>
