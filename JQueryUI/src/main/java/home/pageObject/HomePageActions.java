@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
+import reporting.TestLogger;
 
 import java.util.List;
 
@@ -17,6 +18,8 @@ public class HomePageActions extends WebAPI {
 
     //Actions Class and Drag & Drop
     public void dragAndDropInDraggableSection(){
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+
         Actions actions = new Actions(driver);
 
         for(WebElement e : interactionsList){

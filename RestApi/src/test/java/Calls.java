@@ -1,3 +1,4 @@
+import static common.WebAPI.convertToString;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
@@ -10,6 +11,7 @@ import io.restassured.specification.ResponseSpecification;
 import net.minidev.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import reporting.TestLogger;
 
 public class Calls {
 
@@ -17,6 +19,7 @@ public class Calls {
     //GET
     @Test
     public void test_NumberOfCircuitsFor2017Season_ShouldBe20() {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
 
         given().
         when().
@@ -37,6 +40,7 @@ public class Calls {
     //GET using response spec
     @Test
     public void test_NumberOfCircuits_ShouldBe20_UsingResponseSpec() {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
 
         given().
                 when().
@@ -52,6 +56,8 @@ public class Calls {
     //POST using sample API
     @Test
     public void test_Simple_Api_Register_Student(){
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+
         RestAssured.baseURI ="http://restapi.demoqa.com/customer";
         RequestSpecification request = RestAssured.given();
 
@@ -72,6 +78,8 @@ public class Calls {
     //PUT
     @Test
     public void test_Simple_Api_Update_Employee(){
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+
         int empid = 15410;
 
         RestAssured.baseURI ="http://dummy.restapiexample.com/api/v1";

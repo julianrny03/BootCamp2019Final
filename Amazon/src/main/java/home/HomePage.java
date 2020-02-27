@@ -12,6 +12,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import reporting.TestLogger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,6 +49,8 @@ public class HomePage extends WebAPI {
 
     // make sure my local Mongo is running in order for this to work. if it were on a server, it will work just fine.
     public void SearchAllItemsInMongoDb(){
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+
         List<String> items = new ArrayList<>();
         MongoDatabase db = MongoDbHelper.getDatabase("items");
         MongoCollection itemsForSearch = db.getCollection("ItemsForSearch");
@@ -75,6 +78,8 @@ public class HomePage extends WebAPI {
 
     //Select Drop down Using Select class
     public void selectOptionFromAllDropDown(String option){
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+
         explicitlyWait(10).until(ExpectedConditions.visibilityOf(searchBar));
 
         Select selector = new Select(allDropDown);

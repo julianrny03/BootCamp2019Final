@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import common.*;
 import org.testng.Assert;
+import reporting.TestLogger;
 
 import java.util.List;
 
@@ -15,6 +16,8 @@ public class HomePage extends WebAPI{
 
     //LinkText
     public void clickChaseAutoLink(){
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+
         explicitlyWait(10).until(d -> d.findElement(
                 By.linkText("Chase Auto"))
                 .isDisplayed()
@@ -30,6 +33,8 @@ public class HomePage extends WebAPI{
 
     //partial LinkText
     public void findAndClickInvestOnline(){
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+
         for(WebElement e : onlineContainingElements){
             if(e.getText().equalsIgnoreCase("invest online")){
                 scrollIntoView(e);

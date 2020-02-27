@@ -6,6 +6,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
+import reporting.TestLogger;
 
 import java.util.List;
 
@@ -18,6 +19,8 @@ public class JQueryUIHomePage extends WebAPI {
 
     //javascriptExecutor
     public void clickOnDemos(){
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+
         explicitlyWait(10).until(
                 d -> d.findElement(By.xpath("//ul[@id = 'menu-top']/li/a[contains(@href, 'demos')]"))
                       .isEnabled()
@@ -29,6 +32,8 @@ public class JQueryUIHomePage extends WebAPI {
 
     //scrolling
     public void selectUtilities(String name){
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+
         for (WebElement e : utilitiesList
              ) {
             if(e.getText().equalsIgnoreCase(name)){
@@ -46,6 +51,8 @@ public class JQueryUIHomePage extends WebAPI {
 
     //list ebelement
     public void selectInteractions(String name) {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+
         for (WebElement e : interactionsList
         ) {
             if(e.getText().equalsIgnoreCase(name)){
